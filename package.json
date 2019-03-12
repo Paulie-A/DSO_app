@@ -1,0 +1,15 @@
+{
+  "name": "dsoapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dso.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paul August",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  }
+}

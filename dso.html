@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DSO APP</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+  <body>
+<h1>DSO</h1>
+
+<form action="/" method="get">
+  <button class="btn btn-info btn-sm" type="submit" name="submit" value="back">Back to Main page</button>
+</form>
+
+<form action="/dso" method="post">
+<br>
+<div class="">
+<input type="text" name="Ar_bal" placeholder="AR Balance">
+</div>
+<br>
+<div class="">
+  <input type="text" name="credit_sales" placeholder="Credit Sales">
+</div>
+<br>
+<div class="">
+  <input type="number" name="days" placeholder="Day in month" min="28" max="31">
+</div>
+<br>
+<button class="btn btn-success"type="submit" name="submit">Calculate DSO</button>
+</form>
+
+  </body>
+</html>
