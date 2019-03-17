@@ -5,3 +5,10 @@
 .main-container {
 	text-align: center;
 }
+
+hr {
+  border: dotted #e9ecef 6px;
+  border-bottom: none;
+  width: 10%;
+  margin: 50px auto;
+}
