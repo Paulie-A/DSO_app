@@ -1,5 +1,6 @@
 //jshint esversion:6
 const express = require("express");
+const favicon = require('serve-favicon');
 const bodyParser = require("body-parser");
 
 const app = express();
@@ -7,7 +8,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 // app.use(express.static('public'));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'));
-
+app.use(favicon(__dirname + '/public/images/favicon.ico'));
 
 app.get("/", function(req, res) {
   res.sendFile(__dirname + "/index.html");
