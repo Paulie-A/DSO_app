@@ -31,17 +31,21 @@
             <button class="btn btn-info btn-sm" type="submit" name="submit" value="back">Back to Main page</button>
           </form>
           <br>
-          <form>
+          <form action="/cei" method="post">
             <div class="">
-              <input type="text" name="Ar_bal" placeholder="AR Balance">
+              <input type="text" name="beg_ar_bal" placeholder="Beginning AR balance">
             </div>
             <br>
             <div class="">
-              <input type="text" name="credit_sales" placeholder="Credit Sales">
+              <input type="text" name="cur_cr_sales" placeholder="Total current month sales">
             </div>
             <br>
             <div class="">
-              <input type="number" name="days" placeholder="Day in month" min="28" max="31">
+              <input type="text" name="end_tot_bal" placeholder="Ending total receivables">
+            </div>
+            <br>
+            <div class="">
+              <input type="text" name="end_cur_bal" placeholder="Ending current receivables">
             </div>
             <br>
             <button class="btn btn-success" type="submit" name="submit">Calculate CEI</button>
@@ -50,7 +54,10 @@
       </div>
     </div>
   </div>
-
+  <script
+    src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
