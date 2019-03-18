@@ -5,7 +5,6 @@ const bodyParser = require("body-parser");
 
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
-// app.use(express.static('public'));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'));
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
@@ -28,12 +27,23 @@ var days = Number(req.body.days);
 
 var dso = Math.round (arBal / crSales * days);
 
-res.send("Your DSO is " + dso);
+res.send("Your Days Sales Outstanding (DSO) is " + dso);
 });
 
 //routes for cei
 app.get("/cei", function(req, res) {
   res.sendFile(__dirname + "/cei.html");
+});
+
+app.post("/cei", function(req, res) {
+  var begArBal = Number(req.body.beg_ar_bal);
+  var curCrSales = Number(req.body.cur_cr_sales);
+  var endTotBal = Number(req.body.end_tot_bal);
+  var endCurBal = Number(req.body.end_cur_bal);
+
+  var cei = Math.ceil( (begArBal + curCrSales - endTotBal) / (begArBal + curCrSales - endCurBal) *100);
+
+  res.send("Your Collection Effectiveness Index result is " + cei + "%");
 });
 
 //route for results page
