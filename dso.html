@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="utf-8">
   <title>The DSO App</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./styles/styles.css">
-  <link rel="icon" type="image/x-icon" href="favicon.ico?v="+ Math.trunc(Math.random()*999)>
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v=" + Math.trunc(Math.random()*999)>
 </head>
 
 <body>
@@ -31,16 +32,27 @@
 
           <form action="/dso" method="post">
             <br>
-            <div class="">
+            <div class="variable-input">
+              <p><em>Enter your total receivables balance</em></p>
               <input type="text" name="Ar_bal" placeholder="AR Balance">
             </div>
             <br>
-            <div class="">
+            <div class="variable-input">
+              <p><em>Enter your current credit sales</em></p>
               <input type="text" name="credit_sales" placeholder="Credit Sales">
             </div>
             <br>
-            <div class="">
+            <!-- <div class="">
               <input type="number" name="days" placeholder="Day in month" min="28" max="31">
+            </div> -->
+            <div>
+              <p><em>Select the number of day in current month</em></p>
+              <select class="" type="number" name="days">
+                <option value="31">31</option>
+                <option value="30">30</option>
+                <option value="29">29</option>
+                <option value="28">28</option>
+              </select>
             </div>
             <br>
             <button class="btn btn-success" type="submit" name="submit">Calculate DSO</button>
@@ -55,10 +67,7 @@
   </div>
 
 
-  <script
-    src="http://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </body>
 
 </html>
