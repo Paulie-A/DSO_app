@@ -27,7 +27,7 @@ var days = Number(req.body.days);
 
 var dso = Math.round (arBal / crSales * days);
 
-res.send("Your Days Sales Outstanding (DSO) is " + dso);
+res.send("Your Days Sales Outstanding (DSO) is " + dso + " days");
 });
 
 //routes for cei
@@ -51,6 +51,6 @@ app.get("/result", function(req, res) {
   res.sendFile(__dirname + "/result.html");
 });
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log("Server is running on port 3000");
 });
