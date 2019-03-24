@@ -6,6 +6,10 @@
 	text-align: center;
 }
 
+body {
+	text-align: center;
+}
+
 hr {
   border: dotted #e9ecef 6px;
   border-bottom: none;
