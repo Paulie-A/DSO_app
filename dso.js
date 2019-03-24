@@ -3,6 +3,7 @@ const express = require("express");
 const favicon = require('serve-favicon');
 const bodyParser = require("body-parser");
 
+
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
@@ -27,7 +28,8 @@ var days = Number(req.body.days);
 
 var dso = Math.round (arBal / crSales * days);
 
-res.send("Your Days Sales Outstanding (DSO) is " + dso + " days");
+res.render("dsoresult", {dso:dso});
+// res.send("Your Days Sales Outstanding (DSO) is " + dso + " days");
 });
 
 //routes for cei
@@ -43,7 +45,8 @@ app.post("/cei", function(req, res) {
 
   var cei = Math.ceil( (begArBal + curCrSales - endTotBal) / (begArBal + curCrSales - endCurBal) *100);
 
-  res.send("Your Collection Effectiveness Index result is " + cei + "%");
+res.render("ceiresult", {cei:cei});
+  // res.send("Your Collection Effectiveness Index result is " + cei + "%");
 });
 
 //route for results page
