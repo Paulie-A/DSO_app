@@ -11,14 +11,13 @@ app.use(express.static(__dirname + '/public'));
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
 
 app.get("/", function(req, res) {
-  res.sendFile(__dirname + "/index.html");
+  res.render("index");
+  // res.sendFile(__dirname + "/index.html");
 });
-
-
 
 //routes for DSO calculation
 app.get("/dso", function(req, res) {
-  res.sendFile(__dirname + "/dso.html");
+  res.render("dso");
 });
 
 app.post("/dso", function (req, res) {
@@ -34,7 +33,8 @@ res.render("dsoresult", {dso:dso});
 
 //routes for cei
 app.get("/cei", function(req, res) {
-  res.sendFile(__dirname + "/cei.html");
+  res.render("cei");
+  // res.sendFile(__dirname + "/cei.html");
 });
 
 app.post("/cei", function(req, res) {
@@ -50,9 +50,9 @@ res.render("ceiresult", {cei:cei});
 });
 
 //route for results page
-app.get("/result", function(req, res) {
-  res.sendFile(__dirname + "/result.html");
-});
+// app.get("/result", function(req, res) {
+//   res.sendFile(__dirname + "/result.html");
+// });
 
 app.listen(process.env.PORT || 3000, function() {
   console.log("Server is running on port 3000");

@@ -1,0 +1,37 @@
+<%- include("partials/header") -%>
+
+<div class="main-container">
+  <div class="column">
+    <div class="col-sm-auto">
+      <div class="col-md-auto flex justify-content-center">
+        <h1>Collection Effectiveness Index</h1>
+
+        <form action="/cei" method="post">
+          <div class="variable-input">
+            <p><em>Enter your beginning receivables balance</em></p>
+            <input type="number" name="beg_ar_bal" placeholder="Beginning AR balance">
+          </div>
+          <br>
+          <div class="variable-input">
+            <p><em>Enter your current credit month sales</em></p>
+            <input type="number" name="cur_cr_sales" placeholder="Total curr month sales">
+          </div>
+          <br>
+          <div class="variable-input">
+            <p><em>Enter your total ending receivables balance</em></p>
+            <input type="number" name="end_tot_bal" placeholder="End total receivables">
+          </div>
+          <br>
+          <div class="variable-input">
+            <p><em>Enter your total current month receivables balance</em></p>
+            <input type="number" name="end_cur_bal" placeholder="End curr receivables">
+          </div>
+          <br>
+          <button class="btn btn-success" type="submit" name="submit">Calculate CEI</button>
+        </form>
+        <br>
+        <form action="/" method="get">
+          <button class="btn btn-warning btn-sm" type="submit" name="submit" value="back">Back to Main page</button>
+        </form>
+
+        <%- include("partials/footer") -%>

@@ -1,0 +1,38 @@
+<%- include("partials/header") -%>
+
+<div class="main-container">
+  <div class="column">
+    <div class="col-sm-auto">
+      <div class="col-md-auto flex justify-content-center">
+        <h1>Days Sales Outstanding</h1>
+
+        <form action="/dso" method="post">
+          <div class="variable-input">
+            <p><em>Enter your total receivables balance</em></p>
+            <input type="number" name="Ar_bal" placeholder="AR Balance">
+          </div>
+          <br>
+          <div class="variable-input">
+            <p><em>Enter your current credit sales</em></p>
+            <input type="number" name="credit_sales" placeholder="Credit Sales">
+          </div>
+          <br>
+          <div class="variable-select">
+            <p><em>Select the number of days in current month</em></p>
+            <select type="number" name="days">
+              <option value="31">31</option>
+              <option value="30">30</option>
+              <option value="29">29</option>
+              <option value="28">28</option>
+            </select>
+          </div>
+          <br>
+          <button class="btn btn-success" type="submit" name="submit">Calculate DSO</button>
+        </form>
+        <br>
+        <form action="/" method="get">
+          <button class="btn btn-warning btn-sm" type="submit" name="submit" value="back">Back to Main page</button>
+        </form>
+
+
+<%- include("partials/footer") -%>

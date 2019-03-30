@@ -1,6 +1,10 @@
-<%- include("header") -%>
+<%- include("partials/header") -%>
 
 <h1>Your Result</h1>
 <p>Your DSO (Day Sales Outstanding) is <%= dso %> days</p>
+<br>
+<form action="/" method="get">
+  <button class="btn btn-warning btn-sm" type="submit" name="submit" value="back">Back to Main page</button>
+</form>
 
-<%- include("footer") -%>
+<%- include("partials/footer") -%>
