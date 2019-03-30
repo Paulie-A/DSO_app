@@ -12,10 +12,9 @@ app.use(favicon(__dirname + '/public/images/favicon.ico'));
 
 app.get("/", function(req, res) {
   res.render("index");
-  // res.sendFile(__dirname + "/index.html");
 });
 
-//routes for DSO calculation
+//routes for DSO page and calculation
 app.get("/dso", function(req, res) {
   res.render("dso");
 });
@@ -28,13 +27,11 @@ var days = Number(req.body.days);
 var dso = Math.round (arBal / crSales * days);
 
 res.render("dsoresult", {dso:dso});
-// res.send("Your Days Sales Outstanding (DSO) is " + dso + " days");
 });
 
-//routes for cei
+//routes for cei page and calculation
 app.get("/cei", function(req, res) {
   res.render("cei");
-  // res.sendFile(__dirname + "/cei.html");
 });
 
 app.post("/cei", function(req, res) {
@@ -46,13 +43,9 @@ app.post("/cei", function(req, res) {
   var cei = Math.ceil( (begArBal + curCrSales - endTotBal) / (begArBal + curCrSales - endCurBal) *100);
 
 res.render("ceiresult", {cei:cei});
-  // res.send("Your Collection Effectiveness Index result is " + cei + "%");
 });
 
-//route for results page
-// app.get("/result", function(req, res) {
-//   res.sendFile(__dirname + "/result.html");
-// });
+
 
 app.listen(process.env.PORT || 3000, function() {
   console.log("Server is running on port 3000");

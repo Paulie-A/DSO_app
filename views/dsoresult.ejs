@@ -1,8 +1,18 @@
 <%- include("partials/header") -%>
 
-<h1>Your Result</h1>
-<p>Your DSO (Day Sales Outstanding) is <%= dso %> days</p>
-<br>
+<div class="main-container">
+  <div class="column">
+    <div class="col-sm-auto">
+      <div class="col-md-auto flex justify-content-center">
+        <h1>Your Result</h1>
+        <p>Your DSO (Day Sales Outstanding) is
+          <%= dso %> days</p>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+
 <form action="/" method="get">
   <button class="btn btn-warning btn-sm" type="submit" name="submit" value="back">Back to Main page</button>
 </form>

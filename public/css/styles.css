@@ -1,13 +1,16 @@
-.jumbotron  {
-	text-align: center;
+.jumbotron {
+  text-align: center;
 }
 
 .main-container {
-	text-align: center;
+  text-align: center;
 }
 
 body {
-	text-align: center;
+  min-height: 100vh;
+  position: relative;
+  text-align: center;
+	padding-bottom: 30px;
 }
 
 hr {
@@ -15,4 +18,22 @@ hr {
   border-bottom: none;
   width: 10%;
   margin: 50px auto;
+}
+
+.footer-padding {
+  padding-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #e9ecef;
+}
+
+.footer p {
+  margin-top: 25px;
+  font-size: 12px;
 }
