@@ -11,13 +11,31 @@ body {
   position: relative;
   text-align: center;
 	padding-bottom: 30px;
+	font-family: 'Montserrat', sans-serif;
+  color: #00334e;
 }
 
 hr {
   border: dotted #e9ecef 6px;
   border-bottom: none;
   width: 10%;
-  margin: 50px auto;
+  margin: 45px auto;
+}
+
+.jumbotron {
+  background-color: #e9ecef;
+}
+
+.title {
+  font-size: 5rem;
+}
+
+.sub-title {
+  font-size: 16px;
+}
+
+h1 span {
+  font-weight: 700;
 }
 
 .footer-padding {
