@@ -1,9 +1,15 @@
+
+
 .jumbotron {
   text-align: center;
 }
 
 .main-container {
   text-align: center;
+}
+
+.main-container p {
+  color: #39657c;
 }
 
 body {
@@ -34,6 +40,15 @@ hr {
   font-size: 16px;
 }
 
+.description-text {
+  color: #39657c;
+}
+
+::placeholder {
+  text-align: center;
+  font-size: 12px;
+}
+
 h1 span {
   font-weight: 700;
 }
@@ -54,4 +69,37 @@ h1 span {
 .footer p {
   margin-top: 25px;
   font-size: 12px;
+}
+
+
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+}
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+    .title {
+      font-size: 2rem;
+    }
+
+    .sub-title {
+      font-size: 0.75rem;
+    }
+
+    ::placeholder {
+      font-size: 0.75rem;
+    }
+
+    .main-container h1 {
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    .footer-padding {
+      padding-bottom: 60px;
+    }
+
+  .description-text {
+    font-size: 0.75rem;
+  }
 }
