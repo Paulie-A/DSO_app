@@ -3,8 +3,10 @@ The DSO App is an express app with functions to calculate DSO (days outstanding)
 
 I was inspired to create this app as DSO/CEI is a key performance indicator in my current profession.
 
-### Live view
+### View/Run App
 View the deployed page at https://agile-plains-29357.herokuapp.com/
+
+To run this app locally run dso.js in node and open http://localhost:3000 in the browser.
 
 ### Usage
 
@@ -22,4 +24,3 @@ View the deployed page at https://agile-plains-29357.herokuapp.com/
  4. The closing total of your current month credit sales billed
 
 
-To run this app locally run dso.js in node and open http://localhost:3000 in the browser.
